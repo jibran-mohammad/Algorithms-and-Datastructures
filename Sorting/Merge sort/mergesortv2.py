@@ -2,12 +2,12 @@
 import math
 
 class MergeSort:
-    def __init__(self,sequence):
+    def __init__(self, sequence: list):
         self.sequence= sequence
         self.p= 0
         self.r= len(sequence) - 1
     
-    def mergeProcedure(self,p,q,r):
+    def mergeProcedure(self, p: int, q:int , r:int):
         n1= q - p + 1
         n2= r - q
         l1= [self.sequence[p + i] for i in range(n1)]
@@ -34,7 +34,7 @@ class MergeSort:
                 i += 1
                 k += 1 
         
-    def mergeSort(self,p,r):
+    def mergeSort(self, p:int ,r: int):
         if p < r:
             q= math.floor((p+r)/2)
             self.mergeSort(p, q)
