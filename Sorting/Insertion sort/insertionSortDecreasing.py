@@ -1,5 +1,6 @@
 """
-Insertion sort sorting numbers in decreasing order
+Insertion sort sorting numbers in decreasing order. Time complexity is O(n ^ 2 ) where n is the size of the 
+array
 """
 
 class InsertionSort:

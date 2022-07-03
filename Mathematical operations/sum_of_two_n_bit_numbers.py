@@ -1,5 +1,6 @@
 """
-Program for sum of two n bit numbers stored in the list of size n+1
+Program for sum of two n bit numbers stored in the list of size n+1. Time complexity of O(n) and space 
+is O(n) because we are storing the resulting sum into the array of size n+1
 """
 
 class Sum:

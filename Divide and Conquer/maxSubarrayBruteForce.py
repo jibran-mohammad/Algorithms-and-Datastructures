@@ -1,5 +1,5 @@
 """
-Finding the maximum subarray using brute force: This algorithm takes O(n^2) time
+Finding the maximum subarray using brute force: This algorithm takes O(n^2) time. Space complexity is O(1)
 """
 class MaximumSubarray:
     """

@@ -1,5 +1,7 @@
 """
-Code for sorting n elements using merge sort
+Code for sorting n elements using merge sort. Time complexity is O(nlogn), where n is the size of array
+and space complexity if O(logn), because the number of stack locations needed or we can say the depth of the
+tree is logn.
 """
 
 import math

@@ -1,5 +1,5 @@
 """
-Program for sorting n numbers using selection sort
+Program for sorting n numbers using selection sort.Time complexity of O(n^2) and space complexity if O(1)
 """
 
 

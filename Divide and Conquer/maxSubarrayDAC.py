@@ -1,5 +1,6 @@
 """
-Finding the subarray inside an array with greatest sum, design technique used is divide and conquer
+Finding the subarray inside an array with greatest sum, design technique used is divide and conquer.
+Time complexity is O(nlogn) and space complexity is O(logn)
 """
 import math
 

@@ -1,5 +1,6 @@
 """
-Insertion Sort: sorting in increasing order
+Insertion Sort: sorting in increasing order. Time complexity of the algorithm is O(n ^ 2) where n is the 
+size of array
 """
 def insertionSort(a: list) -> list:
     """
