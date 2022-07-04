@@ -1,3 +1,7 @@
+"""
+Finding the subarray of size k with greatest sum and returning the sum. The time complexity of this algorithm is 
+O(n) and space complexity is O(1).The technique used is sliding window
+"""
 class MaximumSubarraySum:
     def __init__(self, array: list, subarraySize: int):
         self.array = array
