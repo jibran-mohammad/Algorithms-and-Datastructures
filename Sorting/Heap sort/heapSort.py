@@ -67,7 +67,7 @@ class HeapSort:
 def main():
     instance = HeapSort([27,17,3,16,13,10,1,5,7,12,4,8,9,0])
     instance.sort()
-    print(instance) 
+    print(instance)
 
 if __name__== '__main__':
     main()              
