@@ -101,7 +101,16 @@ class MaxPriorityQueue:
         self.heapSize += 1
         self.sequence.append(minsize)
         self.heapIncreaseKey(self.heapSize, key)
-    
+
+    def delete(self, i):
+        """
+        this method deletes the node at ith location. It takes O(logn) time
+        """
+        self.heapIncreaseKey(i, float('inf'))
+        self.sequence[0], self.sequence[self.heapSize] = self.sequence[self.heapSize], self.sequence[0]
+        self.heapSize -= 1    
+        self.maxHeapify(0)
+
     def __str__(self):
         tempList = []
         for i in range(0,self.heapSize + 1):
@@ -129,6 +138,8 @@ def main():
         print('The sequence after key at location 3 has been increased is:', instance)
     instance.insert(25)
     print('The sequence after insertion took place is: ', instance)
+    instance.delete(4)
+    print('The sequence after the element has been deleted is ', instance)
 
 if __name__ == '__main__':
     main()

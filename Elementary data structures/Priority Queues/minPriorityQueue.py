@@ -104,6 +104,15 @@ class MinPriorityQueue:
         self.sequence.append(float('inf'))
         self.minDecreaseKey(self.heapSize, key)
 
+    def delete(self, i):
+        """
+        Deletes the element at node i
+        """
+        self.minDecreaseKey(i, float('-inf'))
+        self.sequence[0], self.sequence[self.heapSize] = self.sequence[self.heapSize], self.sequence[0]
+        self.heapSize -= 1
+        self.minHeapify(0)
+
 def main():
     instance = MinPriorityQueue([4,1,3,2,16,9,10,14,8,7])
     instance.buildMinHeap()
@@ -123,6 +132,8 @@ def main():
     instance.minHeapInsert(6)
     print("The min Priority Queue after inserting a key is")
     print(instance)
+    instance.delete(4)
+    print('The sequence after deleting the an element is ', instance)
 
 if __name__=='__main__':
    main() 
