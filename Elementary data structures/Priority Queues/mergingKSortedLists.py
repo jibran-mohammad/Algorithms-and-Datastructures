@@ -120,6 +120,7 @@ class MergeKSortedLists:
                         break
 
     def __str__(self):
+        
         return 'The output from merging %s sorted lists is %s' % (self.length, self.outputArray)                
 
 def main():

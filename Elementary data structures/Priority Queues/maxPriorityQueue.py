@@ -97,6 +97,9 @@ class MaxPriorityQueue:
                 i = self.parent(i)
 
     def insert(self, key:int):
+        """
+        insert the new element into the heap
+        """ 
         minsize = float('-inf')
         self.heapSize += 1
         self.sequence.append(minsize)
