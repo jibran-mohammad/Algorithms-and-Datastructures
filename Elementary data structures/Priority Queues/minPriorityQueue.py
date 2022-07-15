@@ -9,30 +9,30 @@ class MinPriorityQueue:
     class defined for min Priority Queue with two operating overloading methods and other methods for opearations
     of maipriorityQueue and some support methods like minHeapify, parent, leftchild etc    
     """
-    def __init__(self, sequence):
+    def __init__(self, sequence: list):
         self.sequence = sequence
         self.heapSize = 0
         self.length = len(sequence)
 
-    def leftChild(self, i):
+    def leftChild(self, i:int )-> int:
         """
         returns the left child of node at ith index
         """
         return (2 * i) + 1
 
-    def rightChild(self, i):
+    def rightChild(self, i:int )-> int:
         """
         returns the right child of node at ith index
         """
         return (2 * i) + 2
 
-    def parent(self, i):
+    def parent(self, i:int)-> int:
         """
         returns the parent of element at ith index
         """
         return ((i - 1) // 2)
     
-    def minHeapify(self,i):
+    def minHeapify(self, i:int):
         """
         This method takes the index of the node as the argument and assumes the left index node and right index
         node to be the the minHeaps, but the element at ith location might be voilating the minheap
@@ -84,7 +84,7 @@ class MinPriorityQueue:
             self.minHeapify(0)
             return minimum
 
-    def minDecreaseKey(self, i, key):
+    def minDecreaseKey(self, i:int , key:int):
         """
         Decreases the element by the given value
         """
@@ -96,7 +96,7 @@ class MinPriorityQueue:
                 self.sequence[self.parent(i)], self.sequence[i] = self.sequence[i], self.sequence[self.parent(i)]
                 i = self.parent(i)  
     
-    def minHeapInsert(self, key):
+    def minHeapInsert(self, key:int):
         """
         Inserts the element inside the max Priority Queue
         """
@@ -104,7 +104,7 @@ class MinPriorityQueue:
         self.sequence.append(float('inf'))
         self.minDecreaseKey(self.heapSize, key)
 
-    def delete(self, i):
+    def delete(self, i:int):
         """
         Deletes the element at node i
         """

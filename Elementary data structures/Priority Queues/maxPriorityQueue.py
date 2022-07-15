@@ -9,30 +9,30 @@ class MaxPriorityQueue:
     class defined for max Priority Queue with two operating overloading methods and other methods for opearations
     of maxpriorityQueue and some support methods like maxHeapify, parent, leftchild etc    
     """
-    def __init__(self, sequence):
+    def __init__(self, sequence:list):
         self.sequence = sequence
         self.length= len(sequence)
         self.heapSize = 0
     
-    def parent(self, i):
+    def parent(self, i:int)-> int:
         """
         returns the parent of element at ith index
         """
         return (i - 1) // 2
 
-    def leftChild(self, i):
+    def leftChild(self, i:int)-> int:
         """
         returns the left child of node at ith index
         """
         return (2 * i) + 1
 
-    def rightChild(self,i):
+    def rightChild(self,i:int)-> int:
         """
         returns the right child of node at ith index
         """
         return (2 * i) + 2
 
-    def maxHeapify(self, i):
+    def maxHeapify(self, i:int):
         """
         This method takes the index of the node as the argument and assumes the left index node and right index
         node to be the the maxHeaps, but the element at ith location might be voilating the maxheap
@@ -83,7 +83,7 @@ class MaxPriorityQueue:
             self.maxHeapify(0) 
             return max 
 
-    def heapIncreaseKey(self, i, key):
+    def heapIncreaseKey(self, i:int, key:int):
         """
         Increases the element by the given value
         """
@@ -96,13 +96,13 @@ class MaxPriorityQueue:
                 self.sequence[i], self.sequence[self.parent(i)] = self.sequence[self.parent(i)], self.sequence[i]
                 i = self.parent(i)
 
-    def insert(self, key):
+    def insert(self, key:int):
         minsize = float('-inf')
         self.heapSize += 1
         self.sequence.append(minsize)
         self.heapIncreaseKey(self.heapSize, key)
 
-    def delete(self, i):
+    def delete(self, i:int):
         """
         this method deletes the node at ith location. It takes O(logn) time
         """
