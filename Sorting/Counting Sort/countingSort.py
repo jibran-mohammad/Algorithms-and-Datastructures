@@ -11,7 +11,7 @@ class CountingSort:
     """
     class Countingsort defing two operating overloading methods and one sort method
     """
-    def __init__(self, array: int):
+    def __init__(self, array: list):
         self.array = array
         self.length = len(array)
         self.outputArray = [None for i in range(self.length)]
