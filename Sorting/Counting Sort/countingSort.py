@@ -22,7 +22,7 @@ class CountingSort:
         The temporary indices represent the element in original array, and first we run for loop to see how 
         many such elemnts are present in the original array. Then for every element in the orginal array 
         we see how many elements are in less than or equal to the given element which will give the location
-        of that element in the origianl array.
+        of that element in the output array.
         """
         for i in range(self.length):
             self.temporaryArray[self.array[i]] = self.temporaryArray[self.array[i]] + 1
