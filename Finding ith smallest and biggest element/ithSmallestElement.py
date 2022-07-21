@@ -79,7 +79,7 @@ class IthSmallestElement:
             return self.randomizedSelect(mid + 1, right, i - elementCountLeftArray)
 
 def main():
-    instance = IthSmallestElement([3,2,9,0,7,5,4,8,6,1], 3)
+    instance = IthSmallestElement([3,2,9,0,7,5,4,8,6,1], 5)
     element= instance.randomizedSelect(instance.left, instance.right, instance.i)
     print(f'The {instance.i}th smallest element is {element}')
 
