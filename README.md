@@ -8,3 +8,4 @@ as base for all the practice problems you might do later. So before grinding lee
 - [Sliding Window](https://github.com/jibran-mohammad/Algorithms-and-Datastructures/tree/master/SlidingWindow)
 - [Sorting](https://github.com/jibran-mohammad/Algorithms-and-Datastructures/tree/master/Sorting)
 - [Search](https://github.com/jibran-mohammad/Algorithms-and-Datastructures/tree/master/search)
+- [Finding ith smallest and biggest element](https://github.com/jibran-mohammad/Algorithms-and-Datastructures/tree/master/Finding%20ith%20smallest%20and%20biggest%20element)
