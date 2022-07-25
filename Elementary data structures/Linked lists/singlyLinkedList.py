@@ -1,11 +1,21 @@
-
+"""
+Implementation of singly linked list supporting operation insert, delete and search. Insert and delete will
+take O(1) time given the node to be deleted in singly linked list and search will take O(n) time.
+"""
 
 class Node:
+    """
+    class Node defining the attributes of objects inside the singly linked list.
+    """
     def __init__(self, key):
         self.key= key
         self.next= None
 
 class LinkedList:
+    """
+    class LinkedList defining two operating overloading methods and three other methods insert, delete and
+    search
+    """
     def __init__(self):
         self.emptyObject= Node(None)
 
@@ -46,7 +56,7 @@ class LinkedList:
         tempList.append(temp.key)
         return 'The keys of the linked list are: %s' % tempList
 
-if __name__ == '__main__':
+def main():
     node1, node2, node3, node4 = Node(1), Node(3), Node(5), Node(8)
     list1= LinkedList()
     list1.insert(node1)
@@ -60,3 +70,6 @@ if __name__ == '__main__':
     print(list1)
     print(list1.search(66).key)
     print(list1.search(34))
+
+if __name__ == '__main__':
+    main()    

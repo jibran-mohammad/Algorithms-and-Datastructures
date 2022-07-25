@@ -1,12 +1,23 @@
-
+"""
+Implementation of doubly circular linked list. It implements three operations insert, delete and search. Insert
+takes O(1) time, delete takes O(1) time given the address of the node that has to be deleted and search takes
+O(n) time in worst case. We are using a sentinal to make code easier.
+"""
 
 class Node:
+    """
+    Class Node defining the structure of Object inside the linked list, thus it contains a prev pointer, next
+    pointer, and a key.
+    """
     def __init__(self, data):
         self.prev= None
         self.key= data
         self.next= None
 
 class LinkedList:
+    """
+    Class LinkedList defining two operating overloading methods and three other methods insert, delete and search
+    """
     def __init__(self):
         self.emptyObject= Node(None)
 
@@ -40,8 +51,8 @@ class LinkedList:
             tempList.append( x.key)
             x= x.next
         return 'Keys of the list are: %s' % tempList
-            
-if __name__ == '__main__':
+
+def main():
     node1, node2, node3= Node(1), Node(5), Node(8)
     list1= LinkedList()
     list1.insert(node1)
@@ -52,3 +63,6 @@ if __name__ == '__main__':
     print(x.key)
     list1.delete(x)
     print(list1)
+
+if __name__ == '__main__':
+   main() 

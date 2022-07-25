@@ -1,12 +1,20 @@
-
+"""
+Implementation of stack using doubly linked list. Both push and pop operation takes O(1) time
+"""
 
 class Node:
+    """
+    Class Node defining the attributes present in the object contained in the linked list
+    """
     def __init__(self, key):
         self.prev= None
         self.key= key
         self.next= None
 
 class Stack:
+    """
+    Class Stack defining two operating overloading methods and two other methods push and pop
+    """
     def __init__(self):
         self.emptyObject= Node(None)
         self.top= self.emptyObject
@@ -46,8 +54,7 @@ class Stack:
         
         return 'The keys in the stack are: %s' % tempList
 
-
-if __name__ == '__main__':
+def main():
     node1, node2, node3, node4= Node(5), Node(3), Node(7), Node(65)
     list1= Stack()
     list1.push(node1)
@@ -64,5 +71,8 @@ if __name__ == '__main__':
     list1.pop()
     print(list1)
 
+
+if __name__ == '__main__':
+   main() 
 
     
