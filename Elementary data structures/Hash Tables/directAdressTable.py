@@ -1,6 +1,6 @@
 """
 Implementation of direct address table of size n supporting the operations insert, delete, search and maximum
-insert, delete and search takes O(1) time and maximum takes O(n) time.
+insert, delete and search takes O(1) time and maximum takes O(n) time. The keys need to be distinct
 """
 
 class DirectAddressTable:
