@@ -5,11 +5,11 @@ O(n) and space complexity of O(1)
 """
 
 class MaximumSum:
-	"""
-	MaximumSum class containing two operating overloading methods, __init__() used for creating the attributes 
-	of instance and __repr__ used if instance appears in the printing context. It also contains a method
-	which does the real work of finding the maximum sum subarray
-	"""
+    """
+    MaximumSum class containing two operating overloading methods, __init__() used for creating the attributes 
+    of instance and __repr__ used if instance appears in the printing context. It also contains a method
+    which does the real work of finding the maximum sum subarray
+    """
     def __init__(self, array: list):
         self.array = array
         self.windowStart = 0
@@ -32,7 +32,7 @@ class MaximumSum:
 
     def __repr__(self):
         return ('Maximum subarray in the array %s is %s and its sum is %d' %
-                                         (self.array, self.array[self.left:self.right], self.maximumSum))
+                                         (self.array, self.array[self.left:self.right + 1], self.maximumSum))
 
 def main():
     instance = MaximumSum([-2,-5,6,-2,-3,1,5,-6]) 

@@ -49,7 +49,7 @@ class DoublyLinkedList:
 class DirectAddress(DoublyLinkedList):
     """
     class DirectAddress defining two operating overloading methods and other methods named insert, delete and 
-    search
+    search 
     """
     def __init__(self, size: int):
         self.array= [None for i in range(size)]
